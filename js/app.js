@@ -37,6 +37,49 @@ function fetchDataAndLog() {
                     ogImageMeta.setAttribute("content", `https://cdn.discordapp.com/avatars/${data.data.discord_user.id}/${avatarUrl}.png`);
                 }
             };
+
+            if (data.data.listening_to_spotify === true) {
+                document.getElementById('output').style.display = "flex";
+                document.getElementById('song_details_container').style.display = "flex";
+                document.getElementById('album_cover_container').style.display = "flex";
+                document.getElementById('song_details_title').style.display = "flex";
+                document.getElementById('song').style.display = "flex";
+                document.getElementById('artist').style.display = "flex";
+                document.getElementById('album').style.display = "flex";
+                document.getElementById('album_art_url').src = data.data.spotify.album_art_url;
+                document.getElementById('song').innerText = data.data.spotify.song;
+                document.getElementById('artist').innerText = "By " + data.data.spotify.artist;
+                document.getElementById('album').innerText = "On " + data.data.spotify.album;
+
+                let startTimestamp = data.data.spotify.timestamps.start;
+                let endTimestamp = data.data.spotify.timestamps.end;
+
+                let duration = endTimestamp - startTimestamp;
+
+                let progressBar = document.getElementById('progress-bar');
+
+                function updateProgressBar() {
+                    let currentTime = Date.now();
+                    let elapsedTime = currentTime - startTimestamp;
+
+                    let progress = (elapsedTime / duration) * 100;
+
+                    progressBar.style.width = `${progress}%`;
+
+                    if (currentTime >= endTimestamp) {
+                        clearInterval(progressInterval);
+
+                        setTimeout(fetchUser, 1000);
+                    }
+                }
+
+                updateProgressBar();
+
+                const progressInterval = setInterval(updateProgressBar, 1000);
+
+            } else if (data.data.listening_to_spotify === false) {
+                document.getElementById('output').style.display = "none";
+            }
         })
         .catch(error => {
             console.error("Error fetching data:", error);
