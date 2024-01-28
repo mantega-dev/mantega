@@ -42,12 +42,11 @@ function fetchDataAndLog() {
                 document.getElementById('output').style.display = "flex";
                 document.getElementById('song_details_container').style.display = "flex";
                 document.getElementById('album_cover_container').style.display = "flex";
-                document.getElementById('song_details_title').style.display = "flex";
                 document.getElementById('song').style.display = "flex";
                 document.getElementById('artist').style.display = "flex";
                 document.getElementById('album').style.display = "flex";
                 document.getElementById('album_art_url').src = data.data.spotify.album_art_url;
-                document.getElementById('song').innerText = data.data.spotify.song;
+                document.getElementById('song').innerText = "Listening to " + data.data.spotify.song;
                 document.getElementById('artist').innerText = "By " + data.data.spotify.artist;
                 document.getElementById('album').innerText = "On " + data.data.spotify.album;
 
