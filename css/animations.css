@@ -1,6 +1,5 @@
 .typing-effect {
     position: relative;
-    margin-top: 8px;
 }
 
 .text {
@@ -17,7 +16,7 @@
 .indicator {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 1;
     width: 3px;
     height: 3em;
     margin-top: 8px;
