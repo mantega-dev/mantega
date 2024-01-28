@@ -41,25 +41,3 @@ function hideWord() {
 revealWord();
 
 const opacityDivs = document.querySelectorAll(".opacity-div");
-
-function revealDivsSequentially(index) {
-  if (index < opacityDivs.length) {
-    setTimeout(() => {
-      opacityDivs[index].classList.add("opacity-visible");
-      revealDivsSequentially(index + 1);
-    }, 100);
-  }
-}
-
-window.addEventListener("scroll", () => {
-  const rect = opacityDivs[0].getBoundingClientRect();
-  const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
-
-  if (isVisible) {
-    revealDivsSequentially(0);
-  } else {
-    opacityDivs.forEach((opacityDiv) => {
-      opacityDiv.classList.remove("opacity-visible");
-    });
-  }
-});
