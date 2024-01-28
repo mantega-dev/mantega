@@ -64,18 +64,19 @@ a {
     justify-content: center;
     padding: 12px;
     gap: 8px;
-    border-radius: 5px;
+    border-radius: 50px;
     color: var(--light);
     text-decoration: none;
     font-weight: 600;
     font-size: 12px;
     width: 150px;
     transition: 0.3s ease;
+    border: 2px solid var(--secondary);
+    box-sizing: border-box;
 }
 
 .main-btn:hover {
-    background-color: var(--quaternary);
-    transform: scaleX(1.05) scaleY(1.05);
+    border: 2px solid var(--tertiary);
 }
 
 .main i {
@@ -166,7 +167,7 @@ a {
     bottom: 50px;
     border-radius: 50px;
     box-sizing: border-box;
-  }
+}
 
 .title {
     min-width: max-content;
@@ -183,8 +184,8 @@ a {
     background-color: #00000033;
     backdrop-filter: blur(10px);
     width: 100%;
-    padding: 8px;
-    border-radius: 5px;
+    padding: 10px 0px;
+    border-radius: 100px 100px 15px 100px;
 }
 
 .output p {
@@ -196,6 +197,7 @@ a {
     align-items: center;
     justify-content: center;
     width: min-content;
+    border-radius: 50px;
 }
 
 .song_details_container {
@@ -210,9 +212,17 @@ a {
 
 .album_art_url {
     display: flex;
-    width: 100px;
-    height: 100px;
-    border-radius: 5px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+}
+
+.spotify_logo {
+    position: absolute;
+    top: 55px;
+    left: 65px;
+    width: 20px;
+    height: 20px;
 }
 
 .progress-bar-container {
@@ -230,6 +240,7 @@ a {
     background-color: var(--tertiary);
     transition: width 0.5s linear;
 }
+
 
 .about-me {
     display: flex;
@@ -418,15 +429,6 @@ a {
     height: 25px;
     padding: 2px;
     border-radius: 5px;
-}
-
-.opacity-effect {
-    opacity: 0;
-    transition: opacity 0.8s ease-in-out;
-}
-
-.opacity-visible {
-    opacity: 1;
 }
 
 ::-webkit-scrollbar {
