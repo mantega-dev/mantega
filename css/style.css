@@ -1,12 +1,3 @@
-/* :root {
-    --primary: #fde4c3;
-    --secondary: #312c19;
-    --tertiary: #88742a;
-    --quaternary: #49401e;
-    --dark: #1c1c1c;
-    --light: #f6f6f6;
-} */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root {
@@ -42,97 +33,43 @@ body {
     transition: 0.3s ease-in-out;
 }
 
-img{
+img {
     width: 100%;
     display: flex;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.gradient-left {
-    position: absolute;
-    background-color: transparent;
-    width: 1px;
-    height: 1px;
-    bottom: 50px;
-    left: 0;
-    transform: translateX(-50px);
-    border-radius: 50px;
-    box-shadow: 0px 0px 200px 150px var(--tertiary);
-}
-
-.gradient-right {
-    position: absolute;
-    background-color: transparent;
-    width: 1px;
-    height: 1px;
-    top: 50px;
-    right: 0;
-    transform: translateX(-50px);
-    border-radius: 50px;
-    box-shadow: 0px 0px 200px 150px var(--tertiary);
-}
-
-.main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 100vh;
-    overflow: hidden;
-}
-
-.main img {
-    width: 200px;
-    height: 200px;
-    border: 3px solid var(--tertiary);
-    border-radius: 500px;
-    box-shadow: 0px 0px 100px 0px var(--tertiary);
-}
-
-#status-indicator {
-    background-color: #747781;
-    display: block;
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    border-radius: 50px;
-    margin-bottom: 120px;
-    margin-left: 140px;
-    box-sizing: border-box;
-  }
-
-.title {
-    min-width: max-content;
-    font-size: 60px;
-    margin-top: 28px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.buttons {
+.nav-bar {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    width: 300px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #092d4e4b;
+    backdrop-filter: blur(100px);
+    height: 60px;
+    z-index: 99999;
+    padding-right: 8px;
 }
 
 .main-btn {
-    background-color: var(--tertiary);
+    background-color: var(--secondary);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 12px;
+    gap: 8px;
     border-radius: 5px;
-    margin-top: 12px;
     color: var(--light);
     text-decoration: none;
     font-weight: 600;
     font-size: 12px;
-    width: 100%;
+    width: 150px;
     transition: 0.3s ease;
 }
 
@@ -156,6 +93,144 @@ a{
     border-radius: 10px;
 }
 
+.gradient-left {
+    position: absolute;
+    background-color: transparent;
+    width: 1px;
+    height: 1px;
+    bottom: 50px;
+    left: 0;
+    transform: translateX(-50px);
+    border-radius: 50px;
+    box-shadow: 0px 0px 200px 150px var(--tertiary);
+    z-index: 100;
+}
+
+.gradient-right {
+    position: absolute;
+    background-color: transparent;
+    width: 1px;
+    height: 1px;
+    top: 50px;
+    right: 0;
+    transform: translateX(-50px);
+    border-radius: 50px;
+    box-shadow: 0px 0px 200px 150px var(--tertiary);
+    z-index: 100;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    padding-bottom: 60px;
+}
+
+.main-left-side {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    min-height: 300px;
+}
+
+.main-right-side {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 60%;
+    min-height: 300px;
+}
+
+.profile-picture {
+    width: 250px;
+    height: 250px;
+    margin-left: 150px;
+    border: 3px solid var(--tertiary);
+    border-radius: 500px;
+    box-shadow: 0px 0px 100px 0px var(--tertiary);
+}
+
+#status-indicator {
+    background-color: #747781;
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 80px;
+    bottom: 50px;
+    border-radius: 50px;
+    box-sizing: border-box;
+  }
+
+.title {
+    min-width: max-content;
+    font-size: 60px;
+    margin-top: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.output {
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    justify-content: center;
+    background-color: #00000033;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.output p {
+    display: none;
+}
+
+.album_cover_container {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: min-content;
+}
+
+.song_details_container {
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 8px;
+    height: 80%;
+    width: 80%;
+    font-size: 14px;
+}
+
+.album_art_url {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+.progress-bar-container {
+    display: flex;
+    width: 100%;
+    background-color: #ddd;
+    height: 5px;
+    margin-top: 4px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: var(--tertiary);
+    transition: width 0.5s linear;
+}
+
 .about-me {
     display: flex;
     flex-direction: column;
@@ -163,12 +238,12 @@ a{
     gap: 8px;
     width: 100%;
     min-height: 100vh;
-    padding: 100px 20%;
+    padding: 160px 20%;
     overflow: hidden;
 }
 
 .about-me-items {
-    z-index: 100000;
+    z-index: 1000;
 }
 
 .space {
@@ -178,7 +253,7 @@ a{
 .about-me-section-title {
     color: var(--primary);
     font-size: 35px;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .card-content {
