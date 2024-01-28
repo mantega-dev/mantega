@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="20 years old brazilian man">
-    <link rel="stylesheet" href="/css/style.css?v=1.4">
-    <link rel="stylesheet" href="/css/animations.css?v=1.4">
+    <link rel="stylesheet" href="css/style.css?v=1.5">
+    <link rel="stylesheet" href="css/animations.css?v=1.5">
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="Hello, I’m Mantega"/>
     <meta property="og:description" content="I'm a technology enthusiast, pets lover and photographer as a hobby." />
@@ -20,17 +20,36 @@
 
 <body>
     <div class="gradient-right"></div>
-    <section class="main">
-        <img id="profile-picture" src="/images/profile-picture.gif">
-        <div class="ripple-effect" id="status-indicator"></div>
-        <h1 class="title">Hello! I'm Mantega</h1>
-        <div class="typing-effect">
-            <h2 class="text">I love <span id="dynamic-word"></span></h2>
-            <span class="indicator"></span>
+    <div class="nav-bar">
+        <a href="#main" class="main-btn"><i class="fa-solid fa-house"></i>HOME</a>
+        <a href="#about-me" class="main-btn"><i class="fa-solid fa-user"></i>ABOUT ME</a>
+        <a href="https://discordapp.com/users/532661648494952459" class="main-btn"><i class="fa-solid fa-phone"></i>CONTACT ME</a>
+    </div>
+    <section class="main" id="main">
+        <div class="main-left-side">
+            <img class="profile-picture" id="profile-picture" src="/images/profile-picture.gif">
+            <div class="ripple-effect" id="status-indicator"></div>
         </div>
-        <div class="buttons">
-            <a href="#about-me" class="main-btn">ABOUT ME</a>
-            <a href="https://discordapp.com/users/532661648494952459" class="main-btn">CONTACT ME</a>
+        <div class="main-right-side">
+            <h1 class="title">Hello! I'm Mantega</h1>
+            <div class="typing-effect">
+                <h2 class="text">I love <span id="dynamic-word"></span></h2>
+                <span class="indicator"></span>
+            </div>
+            <div class="output" id="output">
+                <div id="album_cover_container" class="album_cover_container">
+                    <img id="album_art_url" class="album_art_url">
+                </div>
+                <div id="song_details_container" class="song_details_container">
+                    <p id="song_details_title"><strong>Listening to:</strong></p>
+                    <p id="song">Song:</p>
+                    <p id="artist">Artist:</p>
+                    <p id="album">Album:</p>
+                    <div class="progress-bar-container">
+                        <div id="progress-bar" class="progress-bar"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <section class="about-me" id="about-me">
@@ -138,6 +157,6 @@
         <div class="gradient-left"></div>
     </section>
 </body>
-<script src="/js/script.js?v=1.1"></script>
-<script src="/js/app.js?v=1.15"></script>
+<script src="js/script.js?v=1.2"></script>
+<script src="js/app.js?v=1.2"></script>
 </html>
