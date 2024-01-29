@@ -20,11 +20,14 @@ function fetchDataAndLog() {
             const avatarUrl = data.data.discord_user.avatar;
 
             const profilePicture = document.getElementById("profile-picture");
+            const projectProfilePicture = document.getElementById("project_profile-picture");
+            
             const gifUrl = `https://cdn.discordapp.com/avatars/${data.data.discord_user.id}/${avatarUrl}.gif`;
             const img = new Image();
             img.src = gifUrl;
             img.onload = () => {
                 profilePicture.src = gifUrl;
+                projectProfilePicture.src = gifUrl;
                 const ogImageMeta = document.getElementById("og-image-meta");
                 if (ogImageMeta) {
                     ogImageMeta.setAttribute("content", gifUrl);
@@ -32,6 +35,7 @@ function fetchDataAndLog() {
             };
             img.onerror = () => {
                 profilePicture.src = `https://cdn.discordapp.com/avatars/${data.data.discord_user.id}/${avatarUrl}.png`;
+                projectProfilePicture.src = `https://cdn.discordapp.com/avatars/${data.data.discord_user.id}/${avatarUrl}.png`;
                 const ogImageMeta = document.getElementById("og-image-meta");
                 if (ogImageMeta) {
                     ogImageMeta.setAttribute("content", `https://cdn.discordapp.com/avatars/${data.data.discord_user.id}/${avatarUrl}.png`);
