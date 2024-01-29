@@ -46,15 +46,21 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
     position: fixed;
-    bottom: 0;
+    bottom: 8px;
     width: 100%;
-    background-color: #092d4e4b;
-    backdrop-filter: blur(100px);
     height: 60px;
     z-index: 99999;
     padding-right: 8px;
+}
+
+.nav-bar-container {
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 50px;
+    background-color: #092d4e4b;
+    backdrop-filter: blur(100px);
 }
 
 .main-btn {
@@ -134,7 +140,8 @@ a {
     display: flex;
     position: relative;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    margin-right: 60px;
     width: 40%;
     min-height: 300px;
 }
@@ -163,7 +170,7 @@ a {
     position: absolute;
     width: 25px;
     height: 25px;
-    right: 80px;
+    right: 20px;
     bottom: 50px;
     border-radius: 50px;
     box-sizing: border-box;
@@ -172,8 +179,16 @@ a {
 .title {
     min-width: max-content;
     font-size: 60px;
-    margin-top: 15px;
     font-family: 'Poppins', sans-serif;
+    padding: 8px 20px;
+    background-image: linear-gradient(to right, #00000033, #00000000);
+    backdrop-filter: blur(10px);
+}
+
+.subtitle {
+    padding: 8px 20px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
 }
 
 .output {
@@ -183,6 +198,7 @@ a {
     justify-content: center;
     background-color: #00000033;
     backdrop-filter: blur(10px);
+    margin-top: 8px;
     width: 100%;
     padding: 10px 0px;
     border-radius: 100px 100px 15px 100px;
@@ -218,11 +234,13 @@ a {
 }
 
 .spotify_logo {
+    background-color: white;
     position: absolute;
     top: 55px;
     left: 65px;
     width: 20px;
     height: 20px;
+    border-radius: 50px;
 }
 
 .progress-bar-container {
@@ -268,12 +286,12 @@ a {
 }
 
 .card-content {
+    background-image: linear-gradient(to right, #242424,#242424 ,#24242400);
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 4px;
     padding: 8px;
-    border: 2px solid var(--tertiary);
     border-radius: 15px;
     font-size: 18px;
     width: 100%;
@@ -293,30 +311,27 @@ a {
 }
 
 .icons {
-    background-color: var(--tertiary);
+    background-color: #3b3b3b;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    width: calc(100% / 6 - 6.7px);
+    width: 130px;
     height: max-content;
     padding: 8px;
     border-radius: 10px;
     transition: 0.3s ease-in-out;
 }
 
-.icons:hover {
-    cursor: pointer;
-    transform: scale(1.05, 1.05);
-}
-
-.icons i {
-    font-size: 35px;
+.icons img {
+    width: 35px;
+    height: 35px;
+    margin-top: 6px;
 }
 
 .icons p {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .langs {
@@ -326,30 +341,23 @@ a {
 
 .langs img {
     width: 50px;
-    border-radius: 5px;
 }
 
 .flags {
-    background-color: var(--tertiary);
+    background-color: #3b3b3b;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 130px;
     max-height: min-content;
     padding: 8px 0px;
     border-radius: 10px;
-    gap: 8px;
     transition: 0.3s ease-in-out;
 }
 
-.flags:hover {
-    cursor: pointer;
-    transform: scale(1.05, 1.05);
-}
-
 .flags p {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .row {
@@ -367,7 +375,7 @@ a {
 }
 
 .projects-photo {
-    background-color: var(--tertiary);
+    background-color: #535353;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -399,18 +407,18 @@ a {
 }
 
 .projects-content {
-    background-color: var(--quaternary);
+    background-color: #3b3b3b;
     display: flex;
     justify-content: center;
     flex-direction: column;
     width: 100%;
     padding: 8px 12px;
-    gap: 6px;
 }
 
 .projects-description {
     font-size: 16px;
     max-width: max-content;
+    margin-bottom: 2px;
 }
 
 .projects-icons {
@@ -423,7 +431,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--tertiary);
+    background-color: #535353;
     font-size: 16px;
     width: 25px;
     height: 25px;
