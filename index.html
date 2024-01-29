@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="20 years old brazilian man">
-    <link rel="stylesheet" href="css/style.css?v=1.6">
-    <link rel="stylesheet" href="css/animations.css?v=1.6">
+    <link rel="stylesheet" href="css/style.css?v=1.7">
+    <link rel="stylesheet" href="css/animations.css?v=1.7">
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="Hello, I’m Mantega"/>
     <meta property="og:description" content="I'm a technology enthusiast, pets lover and photographer as a hobby." />
@@ -21,9 +21,11 @@
 <body>
     <div class="gradient-right"></div>
     <div class="nav-bar">
-        <a href="#main" class="main-btn"><i class="fa-solid fa-house"></i>HOME</a>
-        <a href="#about-me" class="main-btn"><i class="fa-solid fa-user"></i>ABOUT ME</a>
-        <a href="https://discordapp.com/users/532661648494952459" class="main-btn"><i class="fa-solid fa-phone"></i>CONTACT ME</a>
+        <div class="nav-bar-container">
+            <a href="#main" class="main-btn"><i class="fa-solid fa-house"></i>HOME</a>
+            <a href="#about-me" class="main-btn"><i class="fa-solid fa-user"></i>ABOUT ME</a>
+            <a href="https://discordapp.com/users/532661648494952459" class="main-btn"><i class="fa-solid fa-phone"></i>CONTACT ME</a>
+        </div>
     </div>
     <section class="main" id="main">
         <div class="main-left-side">
@@ -32,7 +34,7 @@
         </div>
         <div class="main-right-side">
             <h1 class="title">Hello! I'm Mantega</h1>
-            <div class="typing-effect">
+            <div class="typing-effect subtitle">
                 <h2 class="text">I love <span id="dynamic-word"></span></h2>
                 <span class="indicator"></span>
             </div>
@@ -85,7 +87,7 @@
                     </div>
                     <div class="projects-container projects-width">
                         <div class="projects-photo">
-                            <img src="./images/profile-picture.gif">
+                            <img src="./images/profile-picture.gif" id="project_profile-picture">
                         </div>
                         <div class="projects-content">
                             <h4>My portfolio</h4>
@@ -104,28 +106,24 @@
                 <div class="card-content">
                     <div class="lang-and-tools">
                         <div class="icons">
-                            <i class="fa-brands fa-html5"></i>
+                            <img src="images/html.svg">
                             <p>HTML</p>
                         </div>
                         <div class="icons">
-                            <i class="fa-brands fa-css3-alt"></i>
+                            <img src="images/css.svg">
                             <p>CSS</p>
                         </div>
                         <div class="icons">
-                            <i class="fa-brands fa-square-js"></i>
+                            <img src="images/javascript.svg">
                             <p>JavaScript</p>
                         </div>
                         <div class="icons">
-                            <i class="fa-brands fa-node-js"></i>
+                            <img src="images/node.svg">
                             <p>Node Js</p>
                         </div>
                         <div class="icons">
-                            <i class="fa-solid fa-leaf"></i>
-                            <p>MongoDB</p>
-                        </div>
-                        <div class="icons">
-                            <i class="fa-brands fa-git-alt"></i>
-                            <p>Git</p>
+                            <img src="images/lua.svg">
+                            <p>Lua</p>
                         </div>
                     </div>
                 </div>
@@ -135,19 +133,19 @@
                 <div class="card-content">
                     <div class="langs">
                         <div class="flags">
-                            <img src="./images/brazil.png">
+                            <img src="./images/brazil.svg">
                             <p>Portuguese C2</p>
                         </div>
                         <div class="flags">
-                            <img src="./images/usa.png">
+                            <img src="./images/usa.svg">
                             <p>English C1</p>
                         </div>
                         <div class="flags">
-                            <img src="./images/spain.png">
+                            <img src="./images/spain.svg">
                             <p>Spanish B1</p>
                         </div>
                         <div class="flags">
-                            <img src="./images/germany.png">
+                            <img src="./images/germany.svg">
                             <p>German A1</p>
                         </div>
                     </div>
@@ -157,6 +155,6 @@
         <div class="gradient-left"></div>
     </section>
 </body>
-<script src="js/script.js?v=1.3"></script>
-<script src="js/app.js?v=1.3"></script>
+<script src="js/script.js?v=1.4"></script>
+<script src="js/app.js?v=1.4"></script>
 </html>
