@@ -54,17 +54,6 @@
     }
 }
 
-@media screen and (max-width: 768px) {
-
-    .text {
-        font-size: 32px;
-    }
-
-    .indicator {
-        height: 2em;
-    }
-}
-
 .ripple-effect {
     display: inline-block;
     width: 30px;
@@ -94,5 +83,16 @@
     to {
         opacity: 0;
         transform: scale(3);
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .text {
+        font-size: 32px;
+    }
+
+    .indicator {
+        height: 2em;
     }
 }
