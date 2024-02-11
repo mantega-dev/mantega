@@ -1,11 +1,11 @@
 const apiUrl = "https://api.lanyard.rest/v1/users/532661648494952459";
 
-function fetchDataAndLog() {
+function fetchUser() {
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
             const discordStatus = data.data.discord_status;
-            setTimeout(fetchDataAndLog, 10000);
+            setTimeout(fetchUser, 10000);
 
             const statusIndicator = document.getElementById('status-indicator');
 
@@ -86,7 +86,7 @@ function fetchDataAndLog() {
         })
         .catch(error => {
             console.error("Error fetching data:", error);
-            setTimeout(fetchDataAndLog, 10000);
+            setTimeout(fetchUser, 10000);
         });
 }
-fetchDataAndLog();
+fetchUser();
