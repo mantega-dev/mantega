@@ -72,7 +72,7 @@ function fetchUser() {
                     if (currentTime >= endTimestamp) {
                         clearInterval(progressInterval);
 
-                        setTimeout(fetchUser, 1000);
+                        setTimeout(updateProgressBar, 1000);
                     }
                 }
 
