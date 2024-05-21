@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="20 years old brazilian man">
-    <link rel="stylesheet" href="css/style.css?v=1.9">
-    <link rel="stylesheet" href="css/animations.css?v=1.9">
+    <link rel="stylesheet" href="css/style.css?v=2.0">
+    <link rel="stylesheet" href="css/animations.css?v=2.0">
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Hello, I’m Mantega" />
     <meta property="og:description" content="I'm a technology enthusiast, pets lover and photographer as a hobby." />
@@ -31,7 +31,7 @@
     <section class="main" id="main">
         <div class="main-left-side">
             <div class="mobile-position">
-                <img class="profile-picture" id="profile-picture">
+                <img class="profile-picture" id="profile-picture" draggable="false">
                 <div class="ripple-effect" id="status-indicator"></div>
             </div>
         </div>
@@ -43,13 +43,15 @@
             </div>
             <div class="output" id="output">
                 <div id="album_cover_container" class="album_cover_container">
-                    <img id="album_art_url" class="album_art_url">
-                    <img class="spotify_logo" src="images/spotify.svg">
+                    <img id="album_art_url" class="album_art_url" draggable="false">
+                    <img class="spotify_logo" src="images/spotify.svg" draggable="false">
                 </div>
                 <div id="song_details_container" class="song_details_container">
                     <p id="song">Song:</p>
                     <p id="artist">Artist:</p>
                     <p id="album">Album:</p>
+                    <input type="range" id="progress-range" class="progress-range">
+
                     <div class="progress-bar-container">
                         <div id="progress-bar" class="progress-bar"></div>
                     </div>
@@ -74,7 +76,7 @@
                 <div class="card-content row">
                     <div class="projects-container">
                         <div class="projects-photo">
-                            <img src="./images/butter.png">
+                            <img src="./images/butter.png" draggable="false">
                             <a href="https://discord.com/api/oauth2/authorize?client_id=805578309718376449&permissions=8&scope=bot%20applications.commands"
                                 class="projects-add-me-btn">Add Me</a>
                         </div>
@@ -90,7 +92,7 @@
                     </div>
                     <div class="projects-container projects-width">
                         <div class="projects-photo">
-                            <img id="project_profile-picture">
+                            <img id="project_profile-picture" draggable="false">
                         </div>
                         <div class="projects-content">
                             <h4>My portfolio</h4>
@@ -109,23 +111,23 @@
                 <div class="card-content">
                     <div class="lang-and-tools">
                         <div class="icons">
-                            <img src="images/html.svg">
+                            <img src="images/html.svg" draggable="false">
                             <p>HTML</p>
                         </div>
                         <div class="icons">
-                            <img src="images/css.svg">
+                            <img src="images/css.svg" draggable="false">
                             <p>CSS</p>
                         </div>
                         <div class="icons">
-                            <img src="images/javascript.svg">
+                            <img src="images/javascript.svg" draggable="false">
                             <p>JavaScript</p>
                         </div>
                         <div class="icons">
-                            <img src="images/node.svg">
+                            <img src="images/node.svg" draggable="false">
                             <p>Node Js</p>
                         </div>
                         <div class="icons">
-                            <img src="images/lua.svg">
+                            <img src="images/lua.svg" draggable="false">
                             <p>Lua</p>
                         </div>
                     </div>
@@ -136,19 +138,19 @@
                 <div class="card-content">
                     <div class="langs">
                         <div class="flags">
-                            <img src="./images/brazil.svg">
+                            <img src="./images/brazil.svg" draggable="false">
                             <p>Portuguese C2</p>
                         </div>
                         <div class="flags">
-                            <img src="./images/usa.svg">
+                            <img src="./images/usa.svg" draggable="false">
                             <p>English C1</p>
                         </div>
                         <div class="flags">
-                            <img src="./images/spain.svg">
+                            <img src="./images/spain.svg" draggable="false">
                             <p>Spanish B1</p>
                         </div>
                         <div class="flags">
-                            <img src="./images/germany.svg">
+                            <img src="./images/germany.svg" draggable="false">
                             <p>German A1</p>
                         </div>
                     </div>
@@ -158,7 +160,7 @@
         <div class="gradient-left"></div>
     </section>
 </body>
-<script src="js/script.js?v=1.4"></script>
-<script src="js/app.js?v=1.4"></script>
+<script src="js/script.js?v=2.0"></script>
+<script src="js/app.js?v=2.0"></script>
 
 </html>
