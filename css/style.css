@@ -192,7 +192,7 @@ a {
 }
 
 .output {
-    display: flex;
+    display: none;
     align-items: center;
     max-width: 500px;
     justify-content: center;
@@ -243,22 +243,31 @@ a {
     border-radius: 50px;
 }
 
-.progress-bar-container {
-    display: flex;
+.progress-range {
+    -webkit-appearance: none;
+    appearance: none;
     width: 100%;
     background-color: #ddd;
-    height: 5px;
     margin-top: 4px;
     border-radius: 50px;
-    overflow: hidden;
 }
 
-.progress-bar {
-    height: 100%;
+.progress-range::-webkit-slider-runnable-track {
     background-color: var(--tertiary);
-    transition: width 0.5s linear;
+    height: 5px;
+    border-radius: 50px;
 }
 
+.progress-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: white;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translateY(-4px);
+}
 
 .about-me {
     display: flex;
@@ -286,7 +295,7 @@ a {
 }
 
 .card-content {
-    background-image: linear-gradient(to right, #242424,#242424 ,#24242400);
+    background-image: linear-gradient(to right, #242424, #242424, #24242400);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -467,7 +476,7 @@ a {
     .main {
         flex-direction: column;
     }
-    
+
     .main-left-side {
         align-items: center;
         justify-content: center;
